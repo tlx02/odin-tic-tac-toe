@@ -30,8 +30,8 @@ class State
       row.each do |box| 
         if box.symbol == nil
           res += '   |' 
-        else 
-          res += " #{box.symbol} |"
+        else
+          res += " #{box.symbol == 1? 'X' : 'O'} |"
         end
       end
       puts res

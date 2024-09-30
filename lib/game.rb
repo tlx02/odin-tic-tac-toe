@@ -9,11 +9,10 @@ class Game
     playerId = 1
 
     while true
-      puts "Player #{playerId}'s turn!"
-      puts "Row:"
-      row = Integer(gets.chomp)
-      puts "Column:"
-      col = Integer(gets.chomp)
+      puts "Player #{playerId}'s turn! Your Move (ie '1,2'):"
+      input = gets.chomp.split(',')
+      row = Integer(input[0]) - 1
+      col = Integer(input[1]) - 1
 
       @state.insertSymbol(row, col, playerId)
       @state.printState
