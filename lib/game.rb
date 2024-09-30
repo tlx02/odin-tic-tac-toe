@@ -14,7 +14,8 @@ class Game
       @state.insertSymbol(row, col, playerId)
       @state.printState
       if @state.playerWon?(playerId)
-        return playerId + ' won!'
+        puts "Player #{playerId} won!"
+        return
       end
       playerId = playerId == 2 ? 1 : 2
     end

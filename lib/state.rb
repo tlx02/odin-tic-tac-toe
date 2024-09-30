@@ -24,7 +24,19 @@ class State
   end
 
   def printState()
-    @table.each {|row| row.each {|box| p box.symbol}}
+    puts "Current State:\n-------------"
+    table = @table.each do |row| 
+      res = "|"
+      row.each do |box| 
+        if box.symbol == nil
+          res += '   |' 
+        else 
+          res += " #{box.symbol} |"
+        end
+      end
+      puts res
+      puts "-------------"
+    end
   end
 
 end
